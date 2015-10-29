@@ -37,9 +37,8 @@ var HomePage = React.createClass({
 
 	render: function () {
 		return (
-			<div className="jumbotron">
+			<div className="container">
 				<h1>Smart Agent Data</h1>
-
 				<ClientList clients={this.state.clients} />
 				<FilterableClientTable />
 			</div>

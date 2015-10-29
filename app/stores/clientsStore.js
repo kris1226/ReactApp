@@ -15,11 +15,13 @@ var _clients = [];
 
  function setClients (clients) {
    _clients = clients;
+   console.log(clients);
  }
 
 var ClientsStore = assign({}, EventEmitter.prototype, {
 
   addChangeListener: function (callback) {
+        console.log(callback);
     this.on(CHANGE_EVENT, callback);
   },
 
@@ -46,6 +48,7 @@ ClientsStore.dispatchToken = Dispatcher.register(function (payload) {
   switch(action.actionType) {
     case ActionTypes.RECEIVE_CLIENTS:
     setClients(action.clients);
+    console.log(action.clients);
     break;
   default:
       return true;

@@ -6,8 +6,8 @@ var ClientTable = React.createClass({
     var rows = [];
     var lastClient = null;
     this.props.clients.forEach(function(client) {
-      if(client.HowToDeliver != lastClient) {
-        rows.push()
+      if(client.HowToDeliver !== lastClient) {
+        rows.push();
       }
     });
   }

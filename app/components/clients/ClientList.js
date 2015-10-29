@@ -12,6 +12,7 @@ var ClientList = React.createClass({
   },
   render: function() {
     var createDropdown = function(client) {
+          console.log(client);
       return (
         <option key={client.ClientKey}
                 value={client.ClientName}>{client.ClientName}</option>
